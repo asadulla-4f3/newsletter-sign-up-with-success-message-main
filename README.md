@@ -56,6 +56,7 @@ Users should be able to:
 
 - [HTML vs Body](https://www.freecodecamp.org/news/html-page-width-height/)
 - [Are You Making These CSS Height Mistakes?](https://www.youtube.com/watch?v=-sF5KsEo6gM)
+- [Input zoom on iOS Safari](https://defensivecss.dev/tip/input-zoom-safari/#:~:text=When%20focusing%20an%20input%20in,size%3A%2016px%20to%20the%20input.)
 
 ## Author
 
