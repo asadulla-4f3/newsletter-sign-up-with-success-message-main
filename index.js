@@ -20,23 +20,27 @@ const validateEmail = (email) => {
 
 btn_subs.addEventListener("click", function (e) {
   e.preventDefault();
-  if (entered_email_id) {
+  // validation check
+  valid = validateEmail(entered_email_id);
+  if (valid) {
+    error_message.innerHTML = "";
     entered_email.innerHTML = entered_email_id;
     subscribe_container.setAttribute("hide", true);
     success_container.removeAttribute("hide");
+  } else {
+    error_message.innerHTML = "Valid email required";
+    emailElement.style["backgroundColor"] = "hsl(4, 58%, 90%)";
+    emailElement.style["color"] = "hsl(4, 100%, 67%)";
+    emailElement.style["borderColor"] = "hsla(4, 100%, 67%, 0.3)";
   }
 });
 
 emailElement.addEventListener("keyup", function (e) {
-  valid = validateEmail(e.target.value);
-  if (valid) {
-    error_message.innerHTML = "";
-    btn_subs.style["backgroundColor"] = "hsl(4, 100%, 67%)";
-    entered_email_id = e.target.value;
-  } else {
-    error_message.innerHTML = "Valid email required";
-    btn_subs.style["backgroundColor"] = "hsl(234, 29%, 20%)";
-  }
+  entered_email_id = e.target.value;
+  error_message.innerHTML = "";
+  emailElement.style["backgroundColor"] = "hsl(0, 0%, 100%)";
+  emailElement.style["color"] = "hsl(234, 29%, 20%)";
+  emailElement.style["borderColor"] = "hsla(231, 7%, 60%, 0.3)";
 });
 
 btn_success.addEventListener("click", function (e) {

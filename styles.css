@@ -2,6 +2,7 @@
 
 :root {
     --Primary_Tomato: hsl(4, 100%, 67%);
+    --Secondary_Tomato: hsl(4, 58%, 90%);
     --Neutral_Dark_Slate_Grey: hsl(234, 29%, 20%);
     --Neutral_Charcoal_Grey: hsl(235, 18%, 26%);
     --Neutral_Grey: hsl(231, 7%, 60%);
@@ -111,19 +112,16 @@ main {
     height: 40px;
     padding: 10px 5px 10px 15px;
     color: var(--Neutral_Dark_Slate_Grey);
-    /* opacity: 0.3; hsla(231, 7%, 60%, 0.3)*/
     border: 1px solid var(--Neutral_Grey);
     border-radius: 7px;
     border-color: hsla(231, 7%, 60%, 0.3);
     cursor: pointer;
-    /* margin: 10px 0 10px 0; */
 }
 
 #email:focus {
     border-color: 1px solid var(--Neutral_Dark_Slate_Grey);
     outline: none;
     opacity: 1;
-    /* color: var(--Neutral_Charcoal_Grey); */
 }
 
 #email::placeholder {
@@ -168,7 +166,6 @@ main {
     display: grid;
     grid-template-rows: auto;
     row-gap: 10px;
-    margin-inline: 10px;
 }
 
 .thanks_header {
@@ -185,44 +182,24 @@ main {
 @media only screen and (max-width: 800px) {
     .subscribe_container {
         flex-direction: column-reverse;
-        /* display: grid;
-        grid-template-rows: 1fr 3fr; */
         width: 100dvw;
         height: 100dvh;
         border-radius: unset;
         padding: 0;
         gap: 0px;
     }
-
-    /* .parent_container {order: 2}
-    .subscribe_container > img {
-        order: 1;
-        width: 100%;
-    } */
   
     .subscribe_container > img {
         content: url('./assets/images/illustration-sign-up-mobile.svg');
-        /* width: 100%; */
+        width: 100%;
     }
-  
-    .parent_container {
-        border: 2px solid red;
-    }
-    
+      
     .child_container {
         padding-top: 0px;
-    }
-
-    .subscribe_container > img {
-        border: 2px solid blue;
     }
     
     .content_header {
         font-size: 34px;
-    }
-
-    .content-text, p {
-        /* font-size: 14px; */
     }
 
     .point > p {
@@ -250,5 +227,24 @@ main {
         height: 50px;
         font-size: 14px;
     }
-  }
-  
+
+    .success_container {
+        width: 100dvw;
+        height: 100dvh;
+        border-radius: 0px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .success_container > img {
+        width: 60px;
+        height: 60px;
+    }
+    .success_container > p {
+        font-size: 18px;
+        line-height: 1.75rem;
+    }
+}
