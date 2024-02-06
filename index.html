@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | QR code component</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="subscribe_container">
+        <div class="parent_container">
+          <div class="child_container grid-flow" data-spacing="small">
+            <h1 class="content_header">Stay updated!</h1>
+            <p class="content_text">
+              Join 60,000+ product managers receiving monthly updated on:
+            </p>
+            <div class="points_group grid-flow" data-spacing="tiny">
+              <div class="point">
+                <span class="list-icon"></span>
+                <p>Product discovery and building what matters</p>
+              </div>
+              <div class="point">
+                <span class="list-icon"></span>
+                <p>Measuring to ensure updates are a success</p>
+              </div>
+              <div class="point">
+                <span class="list-icon"></span>
+                <p>And much more!</p>
+              </div>
+            </div>
+            <form class="email_form grid-flow" data-spacing="tiny">
+              <div class="label_error">
+                <label for="email">Email address</label>
+                <p class="error"></p>
+              </div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value=""
+                placeholder="email@company.com"
+              />
+              <button id="btn_subs" class="btn_subs">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="Newsletter subscribe image"
+        />
+      </div>
+      <!-- success message -->
+      <div class="success_container" hide>
+        <img
+          src="./assets/images/icon-success.svg"
+          alt="success_icon"
+          width="45"
+          height="45"
+        />
+        <h1 class="thanks_header">Thanks for subscribing!</h1>
+        <p class="confirmation_para">
+          A confirmation email has been sent to
+          <b><span id="entered_email"></span></b>. Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+        <button class="btn_success">Dismiss message</button>
+      </div>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
